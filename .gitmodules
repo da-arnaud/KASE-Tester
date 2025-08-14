@@ -1,0 +1,3 @@
+[submodule "KASE"]
+	path = KASE
+	url = https://github.com/da-arnaud/KASE.git
