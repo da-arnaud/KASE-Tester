@@ -14,6 +14,67 @@
 		65FBFAD22E4E39E200759EE3 /* KASE_TesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAD12E4E39E200759EE3 /* KASE_TesterTests.swift */; };
 		65FBFADC2E4E39E200759EE3 /* KASE_TesterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFADB2E4E39E200759EE3 /* KASE_TesterUITests.swift */; };
 		65FBFADE2E4E39E200759EE3 /* KASE_TesterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFADD2E4E39E200759EE3 /* KASE_TesterUITestsLaunchTests.swift */; };
+		65FBFB6C2E4E540100759EE3 /* aes_modes.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAEA2E4E540100759EE3 /* aes_modes.c */; };
+		65FBFB6E2E4E540100759EE3 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAEE2E4E540100759EE3 /* aescrypt.c */; };
+		65FBFB702E4E540100759EE3 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAF12E4E540100759EE3 /* aeskey.c */; };
+		65FBFB712E4E540100759EE3 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAF32E4E540100759EE3 /* aestab.c */; };
+		65FBFB732E4E540100759EE3 /* gf128mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAF92E4E540100759EE3 /* gf128mul.c */; };
+		65FBFB742E4E540100759EE3 /* chacha_merged.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAFD2E4E540100759EE3 /* chacha_merged.c */; };
+		65FBFB752E4E540100759EE3 /* chacha20poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAFE2E4E540100759EE3 /* chacha20poly1305.c */; };
+		65FBFB762E4E540100759EE3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFB052E4E540100759EE3 /* LICENSE */; };
+		65FBFB772E4E540100759EE3 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB072E4E540100759EE3 /* poly1305-donna.c */; };
+		65FBFB782E4E540100759EE3 /* rfc7539.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB092E4E540100759EE3 /* rfc7539.c */; };
+		65FBFB792E4E540100759EE3 /* curve25519-donna-32bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB0C2E4E540100759EE3 /* curve25519-donna-32bit.c */; };
+		65FBFB7A2E4E540100759EE3 /* curve25519-donna-helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB0E2E4E540100759EE3 /* curve25519-donna-helpers.c */; };
+		65FBFB7B2E4E540100759EE3 /* curve25519-donna-scalarmult-base.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB102E4E540100759EE3 /* curve25519-donna-scalarmult-base.c */; };
+		65FBFB7C2E4E540100759EE3 /* ed25519-donna-32bit-tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB122E4E540100759EE3 /* ed25519-donna-32bit-tables.c */; };
+		65FBFB7D2E4E540100759EE3 /* ed25519-donna-basepoint-table.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB142E4E540100759EE3 /* ed25519-donna-basepoint-table.c */; };
+		65FBFB7E2E4E540100759EE3 /* ed25519-donna-impl-base.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB162E4E540100759EE3 /* ed25519-donna-impl-base.c */; };
+		65FBFB7F2E4E540100759EE3 /* ed25519-keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB1D2E4E540100759EE3 /* ed25519-keccak.c */; };
+		65FBFB802E4E540100759EE3 /* ed25519-sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB1F2E4E540100759EE3 /* ed25519-sha3.c */; };
+		65FBFB812E4E540100759EE3 /* ed25519.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB212E4E540100759EE3 /* ed25519.c */; };
+		65FBFB822E4E540100759EE3 /* modm-donna-32bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB232E4E540100759EE3 /* modm-donna-32bit.c */; };
+		65FBFB832E4E540100759EE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFB252E4E540100759EE3 /* README.md */; };
+		65FBFB842E4E540100759EE3 /* address.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB272E4E540100759EE3 /* address.c */; };
+		65FBFB852E4E540100759EE3 /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB292E4E540100759EE3 /* base58.c */; };
+		65FBFB862E4E540100759EE3 /* bignum.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB2B2E4E540100759EE3 /* bignum.c */; };
+		65FBFB872E4E540100759EE3 /* bip32.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB2D2E4E540100759EE3 /* bip32.c */; };
+		65FBFB882E4E540100759EE3 /* bip39_english.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB2F2E4E540100759EE3 /* bip39_english.c */; };
+		65FBFB892E4E540100759EE3 /* bip39.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB302E4E540100759EE3 /* bip39.c */; };
+		65FBFB8A2E4E540100759EE3 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB332E4E540100759EE3 /* blake2b.c */; };
+		65FBFB8B2E4E540100759EE3 /* blake256.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB352E4E540100759EE3 /* blake256.c */; };
+		65FBFB8C2E4E540100759EE3 /* cardano.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB382E4E540100759EE3 /* cardano.c */; };
+		65FBFB8D2E4E540100759EE3 /* curves.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB3A2E4E540100759EE3 /* curves.c */; };
+		65FBFB8E2E4E540100759EE3 /* ecdsa.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB3C2E4E540100759EE3 /* ecdsa.c */; };
+		65FBFB8F2E4E540100759EE3 /* groestl.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB3F2E4E540100759EE3 /* groestl.c */; };
+		65FBFB902E4E540100759EE3 /* hasher.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB412E4E540100759EE3 /* hasher.c */; };
+		65FBFB912E4E540100759EE3 /* hmac_drbg.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB432E4E540100759EE3 /* hmac_drbg.c */; };
+		65FBFB922E4E540100759EE3 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB452E4E540100759EE3 /* hmac.c */; };
+		65FBFB932E4E540100759EE3 /* memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB472E4E540100759EE3 /* memzero.c */; };
+		65FBFB942E4E540100759EE3 /* nist256p1.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB492E4E540100759EE3 /* nist256p1.c */; };
+		65FBFB952E4E540100759EE3 /* nist256p1.table in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFB4B2E4E540100759EE3 /* nist256p1.table */; };
+		65FBFB962E4E540100759EE3 /* pbkdf2.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB4D2E4E540100759EE3 /* pbkdf2.c */; };
+		65FBFB972E4E540100759EE3 /* rand.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB4F2E4E540100759EE3 /* rand.c */; };
+		65FBFB982E4E540100759EE3 /* rfc6979.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB512E4E540100759EE3 /* rfc6979.c */; };
+		65FBFB992E4E540100759EE3 /* ripemd160.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB532E4E540100759EE3 /* ripemd160.c */; };
+		65FBFB9A2E4E540100759EE3 /* script.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB552E4E540100759EE3 /* script.c */; };
+		65FBFB9B2E4E540100759EE3 /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB572E4E540100759EE3 /* secp256k1.c */; };
+		65FBFB9C2E4E540100759EE3 /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB592E4E540100759EE3 /* sha2.c */; };
+		65FBFB9D2E4E540100759EE3 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB5B2E4E540100759EE3 /* sha3.c */; };
+		65FBFB9F2E4E540100759EE3 /* kase_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB5F2E4E540100759EE3 /* kase_crypto.c */; };
+		65FBFBA02E4E540100759EE3 /* kase_hkdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB612E4E540100759EE3 /* kase_hkdf.c */; };
+		65FBFBA12E4E540100759EE3 /* kase_protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB632E4E540100759EE3 /* kase_protocol.c */; };
+		65FBFBA22E4E540100759EE3 /* kase_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB652E4E540100759EE3 /* kase_random.c */; };
+		65FBFBA32E4E540100759EE3 /* kase_sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB672E4E540100759EE3 /* kase_sha256.c */; };
+		65FBFBA42E4E540100759EE3 /* kase_wallet.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB692E4E540100759EE3 /* kase_wallet.c */; };
+		65FBFBA82E4E54B600759EE3 /* WalletBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBA62E4E54B600759EE3 /* WalletBridge.swift */; };
+		65FBFBAB2E4E54C200759EE3 /* WalletStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBA92E4E54C200759EE3 /* WalletStorage.swift */; };
+		65FBFBB22E4E54D000759EE3 /* ConversationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBAC2E4E54D000759EE3 /* ConversationsListView.swift */; };
+		65FBFBB32E4E54D000759EE3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBAD2E4E54D000759EE3 /* MainTabView.swift */; };
+		65FBFBB42E4E54D000759EE3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBAE2E4E54D000759EE3 /* SettingsView.swift */; };
+		65FBFBB52E4E54D000759EE3 /* WalletSetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBAF2E4E54D000759EE3 /* WalletSetupScreen.swift */; };
+		65FBFBB62E4E54D000759EE3 /* WalletViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBB02E4E54D000759EE3 /* WalletViewer.swift */; };
+		65FBFBB82E4E56B400759EE3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFBB72E4E56B400759EE3 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +105,133 @@
 		65FBFAD72E4E39E200759EE3 /* KASE-TesterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KASE-TesterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FBFADB2E4E39E200759EE3 /* KASE_TesterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASE_TesterUITests.swift; sourceTree = "<group>"; };
 		65FBFADD2E4E39E200759EE3 /* KASE_TesterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASE_TesterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65FBFAEA2E4E540100759EE3 /* aes_modes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_modes.c; sourceTree = "<group>"; };
+		65FBFAEB2E4E540100759EE3 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		65FBFAEE2E4E540100759EE3 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		65FBFAF12E4E540100759EE3 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		65FBFAF22E4E540100759EE3 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		65FBFAF32E4E540100759EE3 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		65FBFAF42E4E540100759EE3 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		65FBFAF72E4E540100759EE3 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		65FBFAF82E4E540100759EE3 /* gf_mul_lo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gf_mul_lo.h; sourceTree = "<group>"; };
+		65FBFAF92E4E540100759EE3 /* gf128mul.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gf128mul.c; sourceTree = "<group>"; };
+		65FBFAFA2E4E540100759EE3 /* gf128mul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gf128mul.h; sourceTree = "<group>"; };
+		65FBFAFB2E4E540100759EE3 /* mode_hdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mode_hdr.h; sourceTree = "<group>"; };
+		65FBFAFD2E4E540100759EE3 /* chacha_merged.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chacha_merged.c; sourceTree = "<group>"; };
+		65FBFAFE2E4E540100759EE3 /* chacha20poly1305.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chacha20poly1305.c; sourceTree = "<group>"; };
+		65FBFAFF2E4E540100759EE3 /* chacha20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chacha20poly1305.h; sourceTree = "<group>"; };
+		65FBFB002E4E540100759EE3 /* ecrypt-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-config.h"; sourceTree = "<group>"; };
+		65FBFB012E4E540100759EE3 /* ecrypt-machine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-machine.h"; sourceTree = "<group>"; };
+		65FBFB022E4E540100759EE3 /* ecrypt-portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-portable.h"; sourceTree = "<group>"; };
+		65FBFB032E4E540100759EE3 /* ecrypt-sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-sync.h"; sourceTree = "<group>"; };
+		65FBFB042E4E540100759EE3 /* ecrypt-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-types.h"; sourceTree = "<group>"; };
+		65FBFB052E4E540100759EE3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		65FBFB062E4E540100759EE3 /* poly1305-donna-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-32.h"; sourceTree = "<group>"; };
+		65FBFB072E4E540100759EE3 /* poly1305-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "poly1305-donna.c"; sourceTree = "<group>"; };
+		65FBFB082E4E540100759EE3 /* poly1305-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna.h"; sourceTree = "<group>"; };
+		65FBFB092E4E540100759EE3 /* rfc7539.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rfc7539.c; sourceTree = "<group>"; };
+		65FBFB0A2E4E540100759EE3 /* rfc7539.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfc7539.h; sourceTree = "<group>"; };
+		65FBFB0C2E4E540100759EE3 /* curve25519-donna-32bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna-32bit.c"; sourceTree = "<group>"; };
+		65FBFB0D2E4E540100759EE3 /* curve25519-donna-32bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna-32bit.h"; sourceTree = "<group>"; };
+		65FBFB0E2E4E540100759EE3 /* curve25519-donna-helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna-helpers.c"; sourceTree = "<group>"; };
+		65FBFB0F2E4E540100759EE3 /* curve25519-donna-helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna-helpers.h"; sourceTree = "<group>"; };
+		65FBFB102E4E540100759EE3 /* curve25519-donna-scalarmult-base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna-scalarmult-base.c"; sourceTree = "<group>"; };
+		65FBFB112E4E540100759EE3 /* curve25519-donna-scalarmult-base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna-scalarmult-base.h"; sourceTree = "<group>"; };
+		65FBFB122E4E540100759EE3 /* ed25519-donna-32bit-tables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ed25519-donna-32bit-tables.c"; sourceTree = "<group>"; };
+		65FBFB132E4E540100759EE3 /* ed25519-donna-32bit-tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-donna-32bit-tables.h"; sourceTree = "<group>"; };
+		65FBFB142E4E540100759EE3 /* ed25519-donna-basepoint-table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ed25519-donna-basepoint-table.c"; sourceTree = "<group>"; };
+		65FBFB152E4E540100759EE3 /* ed25519-donna-basepoint-table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-donna-basepoint-table.h"; sourceTree = "<group>"; };
+		65FBFB162E4E540100759EE3 /* ed25519-donna-impl-base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ed25519-donna-impl-base.c"; sourceTree = "<group>"; };
+		65FBFB172E4E540100759EE3 /* ed25519-donna-impl-base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-donna-impl-base.h"; sourceTree = "<group>"; };
+		65FBFB182E4E540100759EE3 /* ed25519-donna-portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-donna-portable.h"; sourceTree = "<group>"; };
+		65FBFB192E4E540100759EE3 /* ed25519-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-donna.h"; sourceTree = "<group>"; };
+		65FBFB1A2E4E540100759EE3 /* ed25519-hash-custom-keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-hash-custom-keccak.h"; sourceTree = "<group>"; };
+		65FBFB1B2E4E540100759EE3 /* ed25519-hash-custom-sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-hash-custom-sha3.h"; sourceTree = "<group>"; };
+		65FBFB1C2E4E540100759EE3 /* ed25519-hash-custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-hash-custom.h"; sourceTree = "<group>"; };
+		65FBFB1D2E4E540100759EE3 /* ed25519-keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ed25519-keccak.c"; sourceTree = "<group>"; };
+		65FBFB1E2E4E540100759EE3 /* ed25519-keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-keccak.h"; sourceTree = "<group>"; };
+		65FBFB1F2E4E540100759EE3 /* ed25519-sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ed25519-sha3.c"; sourceTree = "<group>"; };
+		65FBFB202E4E540100759EE3 /* ed25519-sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ed25519-sha3.h"; sourceTree = "<group>"; };
+		65FBFB212E4E540100759EE3 /* ed25519.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ed25519.c; sourceTree = "<group>"; };
+		65FBFB222E4E540100759EE3 /* ed25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ed25519.h; sourceTree = "<group>"; };
+		65FBFB232E4E540100759EE3 /* modm-donna-32bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "modm-donna-32bit.c"; sourceTree = "<group>"; };
+		65FBFB242E4E540100759EE3 /* modm-donna-32bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "modm-donna-32bit.h"; sourceTree = "<group>"; };
+		65FBFB252E4E540100759EE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		65FBFB272E4E540100759EE3 /* address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = address.c; sourceTree = "<group>"; };
+		65FBFB282E4E540100759EE3 /* address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = address.h; sourceTree = "<group>"; };
+		65FBFB292E4E540100759EE3 /* base58.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base58.c; sourceTree = "<group>"; };
+		65FBFB2A2E4E540100759EE3 /* base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base58.h; sourceTree = "<group>"; };
+		65FBFB2B2E4E540100759EE3 /* bignum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bignum.c; sourceTree = "<group>"; };
+		65FBFB2C2E4E540100759EE3 /* bignum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bignum.h; sourceTree = "<group>"; };
+		65FBFB2D2E4E540100759EE3 /* bip32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bip32.c; sourceTree = "<group>"; };
+		65FBFB2E2E4E540100759EE3 /* bip32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bip32.h; sourceTree = "<group>"; };
+		65FBFB2F2E4E540100759EE3 /* bip39_english.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bip39_english.c; sourceTree = "<group>"; };
+		65FBFB302E4E540100759EE3 /* bip39.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bip39.c; sourceTree = "<group>"; };
+		65FBFB312E4E540100759EE3 /* bip39.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bip39.h; sourceTree = "<group>"; };
+		65FBFB322E4E540100759EE3 /* blake2_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2_common.h; sourceTree = "<group>"; };
+		65FBFB332E4E540100759EE3 /* blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake2b.c; sourceTree = "<group>"; };
+		65FBFB342E4E540100759EE3 /* blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2b.h; sourceTree = "<group>"; };
+		65FBFB352E4E540100759EE3 /* blake256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake256.c; sourceTree = "<group>"; };
+		65FBFB362E4E540100759EE3 /* blake256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake256.h; sourceTree = "<group>"; };
+		65FBFB372E4E540100759EE3 /* byte_order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byte_order.h; sourceTree = "<group>"; };
+		65FBFB382E4E540100759EE3 /* cardano.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cardano.c; sourceTree = "<group>"; };
+		65FBFB392E4E540100759EE3 /* cardano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardano.h; sourceTree = "<group>"; };
+		65FBFB3A2E4E540100759EE3 /* curves.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = curves.c; sourceTree = "<group>"; };
+		65FBFB3B2E4E540100759EE3 /* curves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curves.h; sourceTree = "<group>"; };
+		65FBFB3C2E4E540100759EE3 /* ecdsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecdsa.c; sourceTree = "<group>"; };
+		65FBFB3D2E4E540100759EE3 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		65FBFB3E2E4E540100759EE3 /* groestl_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groestl_internal.h; sourceTree = "<group>"; };
+		65FBFB3F2E4E540100759EE3 /* groestl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = groestl.c; sourceTree = "<group>"; };
+		65FBFB402E4E540100759EE3 /* groestl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groestl.h; sourceTree = "<group>"; };
+		65FBFB412E4E540100759EE3 /* hasher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hasher.c; sourceTree = "<group>"; };
+		65FBFB422E4E540100759EE3 /* hasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hasher.h; sourceTree = "<group>"; };
+		65FBFB432E4E540100759EE3 /* hmac_drbg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac_drbg.c; sourceTree = "<group>"; };
+		65FBFB442E4E540100759EE3 /* hmac_drbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac_drbg.h; sourceTree = "<group>"; };
+		65FBFB452E4E540100759EE3 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		65FBFB462E4E540100759EE3 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		65FBFB472E4E540100759EE3 /* memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memzero.c; sourceTree = "<group>"; };
+		65FBFB482E4E540100759EE3 /* memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memzero.h; sourceTree = "<group>"; };
+		65FBFB492E4E540100759EE3 /* nist256p1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nist256p1.c; sourceTree = "<group>"; };
+		65FBFB4A2E4E540100759EE3 /* nist256p1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nist256p1.h; sourceTree = "<group>"; };
+		65FBFB4B2E4E540100759EE3 /* nist256p1.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nist256p1.table; sourceTree = "<group>"; };
+		65FBFB4C2E4E540100759EE3 /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		65FBFB4D2E4E540100759EE3 /* pbkdf2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pbkdf2.c; sourceTree = "<group>"; };
+		65FBFB4E2E4E540100759EE3 /* pbkdf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pbkdf2.h; sourceTree = "<group>"; };
+		65FBFB4F2E4E540100759EE3 /* rand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rand.c; sourceTree = "<group>"; };
+		65FBFB502E4E540100759EE3 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		65FBFB512E4E540100759EE3 /* rfc6979.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rfc6979.c; sourceTree = "<group>"; };
+		65FBFB522E4E540100759EE3 /* rfc6979.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfc6979.h; sourceTree = "<group>"; };
+		65FBFB532E4E540100759EE3 /* ripemd160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ripemd160.c; sourceTree = "<group>"; };
+		65FBFB542E4E540100759EE3 /* ripemd160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd160.h; sourceTree = "<group>"; };
+		65FBFB552E4E540100759EE3 /* script.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = script.c; sourceTree = "<group>"; };
+		65FBFB562E4E540100759EE3 /* script.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = script.h; sourceTree = "<group>"; };
+		65FBFB572E4E540100759EE3 /* secp256k1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = secp256k1.c; sourceTree = "<group>"; };
+		65FBFB582E4E540100759EE3 /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
+		65FBFB592E4E540100759EE3 /* sha2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha2.c; sourceTree = "<group>"; };
+		65FBFB5A2E4E540100759EE3 /* sha2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha2.h; sourceTree = "<group>"; };
+		65FBFB5B2E4E540100759EE3 /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
+		65FBFB5C2E4E540100759EE3 /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
+		65FBFB5F2E4E540100759EE3 /* kase_crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_crypto.c; sourceTree = "<group>"; };
+		65FBFB602E4E540100759EE3 /* kase_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_crypto.h; sourceTree = "<group>"; };
+		65FBFB612E4E540100759EE3 /* kase_hkdf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_hkdf.c; sourceTree = "<group>"; };
+		65FBFB622E4E540100759EE3 /* kase_hkdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_hkdf.h; sourceTree = "<group>"; };
+		65FBFB632E4E540100759EE3 /* kase_protocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_protocol.c; sourceTree = "<group>"; };
+		65FBFB642E4E540100759EE3 /* kase_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_protocol.h; sourceTree = "<group>"; };
+		65FBFB652E4E540100759EE3 /* kase_random.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_random.c; sourceTree = "<group>"; };
+		65FBFB662E4E540100759EE3 /* kase_random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_random.h; sourceTree = "<group>"; };
+		65FBFB672E4E540100759EE3 /* kase_sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_sha256.c; sourceTree = "<group>"; };
+		65FBFB682E4E540100759EE3 /* kase_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_sha256.h; sourceTree = "<group>"; };
+		65FBFB692E4E540100759EE3 /* kase_wallet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kase_wallet.c; sourceTree = "<group>"; };
+		65FBFB6A2E4E540100759EE3 /* kase_wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kase_wallet.h; sourceTree = "<group>"; };
+		65FBFBA52E4E54B600759EE3 /* kase_wallet-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kase_wallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		65FBFBA62E4E54B600759EE3 /* WalletBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletBridge.swift; sourceTree = "<group>"; };
+		65FBFBA92E4E54C200759EE3 /* WalletStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletStorage.swift; sourceTree = "<group>"; };
+		65FBFBAC2E4E54D000759EE3 /* ConversationsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListView.swift; sourceTree = "<group>"; };
+		65FBFBAD2E4E54D000759EE3 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		65FBFBAE2E4E54D000759EE3 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		65FBFBAF2E4E54D000759EE3 /* WalletSetupScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletSetupScreen.swift; sourceTree = "<group>"; };
+		65FBFBB02E4E54D000759EE3 /* WalletViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewer.swift; sourceTree = "<group>"; };
+		65FBFBB72E4E56B400759EE3 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +282,11 @@
 		65FBFABF2E4E39E000759EE3 /* KASE-Tester */ = {
 			isa = PBXGroup;
 			children = (
+				65FBFBB72E4E56B400759EE3 /* Models.swift */,
+				65FBFBB12E4E54D000759EE3 /* Views */,
+				65FBFBAA2E4E54C200759EE3 /* Utilities */,
+				65FBFBA72E4E54B600759EE3 /* Bridge */,
+				65FBFB6B2E4E540100759EE3 /* lib */,
 				65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */,
 				65FBFAC22E4E39E000759EE3 /* ContentView.swift */,
 				65FBFAC42E4E39E200759EE3 /* Assets.xcassets */,
@@ -125,6 +318,193 @@
 				65FBFADD2E4E39E200759EE3 /* KASE_TesterUITestsLaunchTests.swift */,
 			);
 			path = "KASE-TesterUITests";
+			sourceTree = "<group>";
+		};
+		65FBFAFC2E4E540100759EE3 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFAEA2E4E540100759EE3 /* aes_modes.c */,
+				65FBFAEB2E4E540100759EE3 /* aes.h */,
+				65FBFAEE2E4E540100759EE3 /* aescrypt.c */,
+				65FBFAF12E4E540100759EE3 /* aeskey.c */,
+				65FBFAF22E4E540100759EE3 /* aesopt.h */,
+				65FBFAF32E4E540100759EE3 /* aestab.c */,
+				65FBFAF42E4E540100759EE3 /* aestab.h */,
+				65FBFAF72E4E540100759EE3 /* brg_endian.h */,
+				65FBFAF82E4E540100759EE3 /* gf_mul_lo.h */,
+				65FBFAF92E4E540100759EE3 /* gf128mul.c */,
+				65FBFAFA2E4E540100759EE3 /* gf128mul.h */,
+				65FBFAFB2E4E540100759EE3 /* mode_hdr.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		65FBFB0B2E4E540100759EE3 /* chacha20poly1305 */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFAFD2E4E540100759EE3 /* chacha_merged.c */,
+				65FBFAFE2E4E540100759EE3 /* chacha20poly1305.c */,
+				65FBFAFF2E4E540100759EE3 /* chacha20poly1305.h */,
+				65FBFB002E4E540100759EE3 /* ecrypt-config.h */,
+				65FBFB012E4E540100759EE3 /* ecrypt-machine.h */,
+				65FBFB022E4E540100759EE3 /* ecrypt-portable.h */,
+				65FBFB032E4E540100759EE3 /* ecrypt-sync.h */,
+				65FBFB042E4E540100759EE3 /* ecrypt-types.h */,
+				65FBFB052E4E540100759EE3 /* LICENSE */,
+				65FBFB062E4E540100759EE3 /* poly1305-donna-32.h */,
+				65FBFB072E4E540100759EE3 /* poly1305-donna.c */,
+				65FBFB082E4E540100759EE3 /* poly1305-donna.h */,
+				65FBFB092E4E540100759EE3 /* rfc7539.c */,
+				65FBFB0A2E4E540100759EE3 /* rfc7539.h */,
+			);
+			path = chacha20poly1305;
+			sourceTree = "<group>";
+		};
+		65FBFB262E4E540100759EE3 /* ed25519-donna */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFB0C2E4E540100759EE3 /* curve25519-donna-32bit.c */,
+				65FBFB0D2E4E540100759EE3 /* curve25519-donna-32bit.h */,
+				65FBFB0E2E4E540100759EE3 /* curve25519-donna-helpers.c */,
+				65FBFB0F2E4E540100759EE3 /* curve25519-donna-helpers.h */,
+				65FBFB102E4E540100759EE3 /* curve25519-donna-scalarmult-base.c */,
+				65FBFB112E4E540100759EE3 /* curve25519-donna-scalarmult-base.h */,
+				65FBFB122E4E540100759EE3 /* ed25519-donna-32bit-tables.c */,
+				65FBFB132E4E540100759EE3 /* ed25519-donna-32bit-tables.h */,
+				65FBFB142E4E540100759EE3 /* ed25519-donna-basepoint-table.c */,
+				65FBFB152E4E540100759EE3 /* ed25519-donna-basepoint-table.h */,
+				65FBFB162E4E540100759EE3 /* ed25519-donna-impl-base.c */,
+				65FBFB172E4E540100759EE3 /* ed25519-donna-impl-base.h */,
+				65FBFB182E4E540100759EE3 /* ed25519-donna-portable.h */,
+				65FBFB192E4E540100759EE3 /* ed25519-donna.h */,
+				65FBFB1A2E4E540100759EE3 /* ed25519-hash-custom-keccak.h */,
+				65FBFB1B2E4E540100759EE3 /* ed25519-hash-custom-sha3.h */,
+				65FBFB1C2E4E540100759EE3 /* ed25519-hash-custom.h */,
+				65FBFB1D2E4E540100759EE3 /* ed25519-keccak.c */,
+				65FBFB1E2E4E540100759EE3 /* ed25519-keccak.h */,
+				65FBFB1F2E4E540100759EE3 /* ed25519-sha3.c */,
+				65FBFB202E4E540100759EE3 /* ed25519-sha3.h */,
+				65FBFB212E4E540100759EE3 /* ed25519.c */,
+				65FBFB222E4E540100759EE3 /* ed25519.h */,
+				65FBFB232E4E540100759EE3 /* modm-donna-32bit.c */,
+				65FBFB242E4E540100759EE3 /* modm-donna-32bit.h */,
+				65FBFB252E4E540100759EE3 /* README.md */,
+			);
+			path = "ed25519-donna";
+			sourceTree = "<group>";
+		};
+		65FBFB5D2E4E540100759EE3 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFAFC2E4E540100759EE3 /* aes */,
+				65FBFB0B2E4E540100759EE3 /* chacha20poly1305 */,
+				65FBFB262E4E540100759EE3 /* ed25519-donna */,
+				65FBFB272E4E540100759EE3 /* address.c */,
+				65FBFB282E4E540100759EE3 /* address.h */,
+				65FBFB292E4E540100759EE3 /* base58.c */,
+				65FBFB2A2E4E540100759EE3 /* base58.h */,
+				65FBFB2B2E4E540100759EE3 /* bignum.c */,
+				65FBFB2C2E4E540100759EE3 /* bignum.h */,
+				65FBFB2D2E4E540100759EE3 /* bip32.c */,
+				65FBFB2E2E4E540100759EE3 /* bip32.h */,
+				65FBFB2F2E4E540100759EE3 /* bip39_english.c */,
+				65FBFB302E4E540100759EE3 /* bip39.c */,
+				65FBFB312E4E540100759EE3 /* bip39.h */,
+				65FBFB322E4E540100759EE3 /* blake2_common.h */,
+				65FBFB332E4E540100759EE3 /* blake2b.c */,
+				65FBFB342E4E540100759EE3 /* blake2b.h */,
+				65FBFB352E4E540100759EE3 /* blake256.c */,
+				65FBFB362E4E540100759EE3 /* blake256.h */,
+				65FBFB372E4E540100759EE3 /* byte_order.h */,
+				65FBFB382E4E540100759EE3 /* cardano.c */,
+				65FBFB392E4E540100759EE3 /* cardano.h */,
+				65FBFB3A2E4E540100759EE3 /* curves.c */,
+				65FBFB3B2E4E540100759EE3 /* curves.h */,
+				65FBFB3C2E4E540100759EE3 /* ecdsa.c */,
+				65FBFB3D2E4E540100759EE3 /* ecdsa.h */,
+				65FBFB3E2E4E540100759EE3 /* groestl_internal.h */,
+				65FBFB3F2E4E540100759EE3 /* groestl.c */,
+				65FBFB402E4E540100759EE3 /* groestl.h */,
+				65FBFB412E4E540100759EE3 /* hasher.c */,
+				65FBFB422E4E540100759EE3 /* hasher.h */,
+				65FBFB432E4E540100759EE3 /* hmac_drbg.c */,
+				65FBFB442E4E540100759EE3 /* hmac_drbg.h */,
+				65FBFB452E4E540100759EE3 /* hmac.c */,
+				65FBFB462E4E540100759EE3 /* hmac.h */,
+				65FBFB472E4E540100759EE3 /* memzero.c */,
+				65FBFB482E4E540100759EE3 /* memzero.h */,
+				65FBFB492E4E540100759EE3 /* nist256p1.c */,
+				65FBFB4A2E4E540100759EE3 /* nist256p1.h */,
+				65FBFB4B2E4E540100759EE3 /* nist256p1.table */,
+				65FBFB4C2E4E540100759EE3 /* options.h */,
+				65FBFB4D2E4E540100759EE3 /* pbkdf2.c */,
+				65FBFB4E2E4E540100759EE3 /* pbkdf2.h */,
+				65FBFB4F2E4E540100759EE3 /* rand.c */,
+				65FBFB502E4E540100759EE3 /* rand.h */,
+				65FBFB512E4E540100759EE3 /* rfc6979.c */,
+				65FBFB522E4E540100759EE3 /* rfc6979.h */,
+				65FBFB532E4E540100759EE3 /* ripemd160.c */,
+				65FBFB542E4E540100759EE3 /* ripemd160.h */,
+				65FBFB552E4E540100759EE3 /* script.c */,
+				65FBFB562E4E540100759EE3 /* script.h */,
+				65FBFB572E4E540100759EE3 /* secp256k1.c */,
+				65FBFB582E4E540100759EE3 /* secp256k1.h */,
+				65FBFB592E4E540100759EE3 /* sha2.c */,
+				65FBFB5A2E4E540100759EE3 /* sha2.h */,
+				65FBFB5B2E4E540100759EE3 /* sha3.c */,
+				65FBFB5C2E4E540100759EE3 /* sha3.h */,
+			);
+			path = crypto;
+			sourceTree = "<group>";
+		};
+		65FBFB6B2E4E540100759EE3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFB5D2E4E540100759EE3 /* crypto */,
+				65FBFB5F2E4E540100759EE3 /* kase_crypto.c */,
+				65FBFB602E4E540100759EE3 /* kase_crypto.h */,
+				65FBFB612E4E540100759EE3 /* kase_hkdf.c */,
+				65FBFB622E4E540100759EE3 /* kase_hkdf.h */,
+				65FBFB632E4E540100759EE3 /* kase_protocol.c */,
+				65FBFB642E4E540100759EE3 /* kase_protocol.h */,
+				65FBFB652E4E540100759EE3 /* kase_random.c */,
+				65FBFB662E4E540100759EE3 /* kase_random.h */,
+				65FBFB672E4E540100759EE3 /* kase_sha256.c */,
+				65FBFB682E4E540100759EE3 /* kase_sha256.h */,
+				65FBFB692E4E540100759EE3 /* kase_wallet.c */,
+				65FBFB6A2E4E540100759EE3 /* kase_wallet.h */,
+			);
+			name = lib;
+			path = KASE/lib;
+			sourceTree = SOURCE_ROOT;
+		};
+		65FBFBA72E4E54B600759EE3 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFBA52E4E54B600759EE3 /* kase_wallet-Bridging-Header.h */,
+				65FBFBA62E4E54B600759EE3 /* WalletBridge.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		65FBFBAA2E4E54C200759EE3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFBA92E4E54C200759EE3 /* WalletStorage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		65FBFBB12E4E54D000759EE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65FBFBAC2E4E54D000759EE3 /* ConversationsListView.swift */,
+				65FBFBAD2E4E54D000759EE3 /* MainTabView.swift */,
+				65FBFBAE2E4E54D000759EE3 /* SettingsView.swift */,
+				65FBFBAF2E4E54D000759EE3 /* WalletSetupScreen.swift */,
+				65FBFBB02E4E54D000759EE3 /* WalletViewer.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +611,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FBFB762E4E540100759EE3 /* LICENSE in Resources */,
 				65FBFAC82E4E39E200759EE3 /* Preview Assets.xcassets in Resources */,
+				65FBFB952E4E540100759EE3 /* nist256p1.table in Resources */,
+				65FBFB832E4E540100759EE3 /* README.md in Resources */,
 				65FBFAC52E4E39E200759EE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +640,66 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FBFB922E4E540100759EE3 /* hmac.c in Sources */,
+				65FBFB932E4E540100759EE3 /* memzero.c in Sources */,
+				65FBFB702E4E540100759EE3 /* aeskey.c in Sources */,
+				65FBFB712E4E540100759EE3 /* aestab.c in Sources */,
+				65FBFBA82E4E54B600759EE3 /* WalletBridge.swift in Sources */,
+				65FBFB7C2E4E540100759EE3 /* ed25519-donna-32bit-tables.c in Sources */,
+				65FBFB9C2E4E540100759EE3 /* sha2.c in Sources */,
+				65FBFB852E4E540100759EE3 /* base58.c in Sources */,
 				65FBFAC32E4E39E000759EE3 /* ContentView.swift in Sources */,
+				65FBFBA02E4E540100759EE3 /* kase_hkdf.c in Sources */,
+				65FBFBB22E4E54D000759EE3 /* ConversationsListView.swift in Sources */,
+				65FBFBB82E4E56B400759EE3 /* Models.swift in Sources */,
+				65FBFB7A2E4E540100759EE3 /* curve25519-donna-helpers.c in Sources */,
+				65FBFB8D2E4E540100759EE3 /* curves.c in Sources */,
+				65FBFB7F2E4E540100759EE3 /* ed25519-keccak.c in Sources */,
+				65FBFB972E4E540100759EE3 /* rand.c in Sources */,
+				65FBFBA12E4E540100759EE3 /* kase_protocol.c in Sources */,
+				65FBFB8E2E4E540100759EE3 /* ecdsa.c in Sources */,
+				65FBFB902E4E540100759EE3 /* hasher.c in Sources */,
+				65FBFB792E4E540100759EE3 /* curve25519-donna-32bit.c in Sources */,
+				65FBFB892E4E540100759EE3 /* bip39.c in Sources */,
+				65FBFB862E4E540100759EE3 /* bignum.c in Sources */,
+				65FBFB7D2E4E540100759EE3 /* ed25519-donna-basepoint-table.c in Sources */,
+				65FBFB782E4E540100759EE3 /* rfc7539.c in Sources */,
+				65FBFBA22E4E540100759EE3 /* kase_random.c in Sources */,
+				65FBFB842E4E540100759EE3 /* address.c in Sources */,
+				65FBFBB42E4E54D000759EE3 /* SettingsView.swift in Sources */,
+				65FBFB7B2E4E540100759EE3 /* curve25519-donna-scalarmult-base.c in Sources */,
+				65FBFB942E4E540100759EE3 /* nist256p1.c in Sources */,
+				65FBFB772E4E540100759EE3 /* poly1305-donna.c in Sources */,
+				65FBFB7E2E4E540100759EE3 /* ed25519-donna-impl-base.c in Sources */,
+				65FBFB8A2E4E540100759EE3 /* blake2b.c in Sources */,
+				65FBFBB62E4E54D000759EE3 /* WalletViewer.swift in Sources */,
+				65FBFB882E4E540100759EE3 /* bip39_english.c in Sources */,
+				65FBFB812E4E540100759EE3 /* ed25519.c in Sources */,
+				65FBFB752E4E540100759EE3 /* chacha20poly1305.c in Sources */,
+				65FBFB8B2E4E540100759EE3 /* blake256.c in Sources */,
+				65FBFB872E4E540100759EE3 /* bip32.c in Sources */,
+				65FBFB9A2E4E540100759EE3 /* script.c in Sources */,
+				65FBFB9F2E4E540100759EE3 /* kase_crypto.c in Sources */,
+				65FBFBB52E4E54D000759EE3 /* WalletSetupScreen.swift in Sources */,
+				65FBFB6C2E4E540100759EE3 /* aes_modes.c in Sources */,
+				65FBFB912E4E540100759EE3 /* hmac_drbg.c in Sources */,
+				65FBFB6E2E4E540100759EE3 /* aescrypt.c in Sources */,
+				65FBFBA42E4E540100759EE3 /* kase_wallet.c in Sources */,
+				65FBFBAB2E4E54C200759EE3 /* WalletStorage.swift in Sources */,
+				65FBFB9B2E4E540100759EE3 /* secp256k1.c in Sources */,
+				65FBFB802E4E540100759EE3 /* ed25519-sha3.c in Sources */,
+				65FBFBA32E4E540100759EE3 /* kase_sha256.c in Sources */,
+				65FBFB982E4E540100759EE3 /* rfc6979.c in Sources */,
+				65FBFB8F2E4E540100759EE3 /* groestl.c in Sources */,
+				65FBFB9D2E4E540100759EE3 /* sha3.c in Sources */,
+				65FBFB962E4E540100759EE3 /* pbkdf2.c in Sources */,
+				65FBFB992E4E540100759EE3 /* ripemd160.c in Sources */,
+				65FBFB742E4E540100759EE3 /* chacha_merged.c in Sources */,
 				65FBFAC12E4E39E000759EE3 /* KASE_TesterApp.swift in Sources */,
+				65FBFB822E4E540100759EE3 /* modm-donna-32bit.c in Sources */,
+				65FBFB8C2E4E540100759EE3 /* cardano.c in Sources */,
+				65FBFB732E4E540100759EE3 /* gf128mul.c in Sources */,
+				65FBFBB32E4E54D000759EE3 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +788,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester/lib",
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -404,6 +849,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester/lib",
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -425,6 +874,10 @@
 				DEVELOPMENT_TEAM = 24XY6SS87S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester/lib",
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,6 +891,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KASE-Tester/Bridge/kase_wallet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,6 +908,10 @@
 				DEVELOPMENT_TEAM = 24XY6SS87S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester/lib",
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +925,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KASE-Tester/Bridge/kase_wallet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
