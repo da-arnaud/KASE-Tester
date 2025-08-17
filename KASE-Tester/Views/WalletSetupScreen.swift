@@ -61,7 +61,7 @@ struct WalletSetupScreen: View {
         }
 
         // Appel à la librairie C via la fonction Swift
-        guard let wallet = recoverWallet(from: seedPhrase, passphrase: password) else {
+        guard let wallet = WalletBridge.recoverWallet(from: seedPhrase, passphrase: password) else {
             alertMessage = "Failed to recover wallet. Please check your seed phrase."
             showingAlert = true
             return

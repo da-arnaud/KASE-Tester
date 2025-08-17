@@ -10,10 +10,10 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            ConversationsListView()
+            ActionsView()
                 .tabItem {
-                    Image(systemName: "message")
-                    Text("Chats")
+                    Image(systemName: "play.circle")
+                    Text("Actions")
                 }
 
             SettingsView()

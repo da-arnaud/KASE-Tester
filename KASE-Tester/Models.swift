@@ -12,3 +12,9 @@ struct UserWallet: Codable {
     let publicKey: String
     let privateKey: String  // à crypter si possible
 }
+
+// MARK: - Enum pour les types de crypto
+enum CryptoType: String, CaseIterable {
+    case kas = "KAS"
+    case eth = "ETH"
+}
