@@ -9,8 +9,9 @@ import Foundation
 
 struct UserWallet: Codable {
     let address: String
-    let publicKey: String
-    let privateKey: String  // à crypter si possible
+    let privateKey: Data
+    let publicKey: Data
+    let mnemonic: String
 }
 
 // MARK: - Enum pour les types de crypto

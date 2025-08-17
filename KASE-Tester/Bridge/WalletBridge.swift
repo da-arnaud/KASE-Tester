@@ -43,10 +43,31 @@ struct WalletBridge {
         }
     }
     
-    static func createWallet(cryptoType: CryptoType) -> ImportResult {
-            // TODO: Implémenter
-            return ImportResult(success: true, wallet: nil, error: nil)
+    // Dans WalletBridge.swift
+    static func createWallet() -> (success: Bool, wallet: UserWallet?, error: String?) {
+        var wallet = kase_wallet_t()
+        let result = kase_generate_wallet(&wallet)
+        
+        if result == KASE_OK {
+            let userWallet = UserWallet(
+                address: withUnsafeBytes(of: wallet.kaspa_address) { bytes in
+                                String(cString: bytes.bindMemory(to: CChar.self).baseAddress!)
+                            },
+                privateKey: withUnsafeBytes(of: wallet.priv_key) { bytes in
+                                Data(bytes)
+                            },
+                publicKey: withUnsafeBytes(of: wallet.pub_key) { bytes in
+                                Data(bytes)
+                            },
+                mnemonic: withUnsafeBytes(of: wallet.mnemonic) { bytes in
+                    String(cString: bytes.bindMemory(to: CChar.self).baseAddress!)
+                }
+            )
+            return (true, userWallet, nil)
+        } else {
+            return (false, nil, "Erreur création wallet: \(result)")
         }
+    }
     
     static func recoverWallet(from mnemonic: String, passphrase: String = "") -> UserWallet? {
         var wallet = kase_wallet_t()
@@ -68,8 +89,8 @@ struct WalletBridge {
             return nil
         }
         
-        let pubKey = Data(bytes: &wallet.pub_key, count: 33).hexEncodedString()
-        let privKey = Data(bytes: &wallet.priv_key, count: 32).hexEncodedString()
+        let pubKey = Data(bytes: &wallet.pub_key, count: 33)
+        let privKey = Data(bytes: &wallet.priv_key, count: 32)
         //let address = String(cString: &wallet.kaspa_address.0)
         
         let addressData = Data(bytes: &wallet.kaspa_address, count: 128)
@@ -84,6 +105,6 @@ struct WalletBridge {
             print("Failed to decode Kaspa address from wallet.")
             return nil
         }
-        return UserWallet(address: finalAddress, publicKey: pubKey, privateKey: privKey)
+        return UserWallet(address: finalAddress, privateKey: privKey, publicKey: pubKey,  mnemonic: mnemonic)
     }
 }

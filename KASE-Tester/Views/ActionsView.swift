@@ -55,18 +55,56 @@ struct ActionsView: View {
         .background(Color("background-solea-blue"))
         .navigationTitle("Actions")
         .navigationBarTitleDisplayMode(.large)
+        .background(Color("background-solea-blue"))
+        .navigationTitle("Actions")
+        .navigationBarTitleDisplayMode(.large)
+        .sheet(isPresented: $showKasImport) {
+            ImportWalletSheet(cryptoType: .kas,  isPresented: $showKasImport)
+        }
+        .sheet(isPresented: $showEthImport) {
+            ImportWalletSheet(cryptoType: .eth,  isPresented: $showKasImport)
+        }
+
     }
     
     // MARK: - KAS Actions
     private func createKasWallet() {
         print("🔑 Créer Wallet KAS")
-        // TODO: Implémenter avec WalletBridge
+        // Créer le wallet via le bridge C
+            let result = WalletBridge.createWallet()
+            
+            if result.success, let wallet = result.wallet {
+                print("✅ Wallet créé!")
+                print("📍 Adresse: \(wallet.address)")
+                print("🔑 Clé publique: \(wallet.publicKey.hexString)")
+                print("🔑 Clé privée: \(wallet.privateKey.hexString)")
+                
+                // Créer le UserWallet pour sauvegarde
+                let userWallet = UserWallet(
+                    address: wallet.address,
+                    privateKey: wallet.privateKey,
+                    publicKey: wallet.publicKey,
+                    mnemonic: wallet.mnemonic // Nouveau champ !
+                )
+                
+                // Sauvegarder
+                do {
+                    try WalletStorage.save(userWallet)
+                    print("💾 Wallet sauvegardé avec succès")
+                    
+                    // TODO: Optionnel - Afficher la phrase mnémonique à l'utilisateur
+                    print("📝 Phrase de récupération: \(wallet.mnemonic)")
+                    print("⚠️  IMPORTANT: Notez cette phrase dans un endroit sûr!")
+                    
+                } catch {
+                    print("❌ Erreur sauvegarde: \(error)")
+                }
+                
+            } else {
+                print("❌ Erreur création wallet: \(result.error ?? "Inconnue")")
+            }
     }
     
-    private func importKasWallet() {
-        print("📥 Importer Wallet KAS")
-        // TODO: Implémenter avec WalletBridge
-    }
     
     private func deleteKasWallet() {
         print("🗑️ Supprimer Wallet KAS")
