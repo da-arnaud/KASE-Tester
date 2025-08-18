@@ -166,6 +166,29 @@ struct ImportWalletSheet: View {
                     isImporting = false
                     
                     if result.success, let wallet = result.wallet {
+                        //SAVE WALLET
+                        // Créer le UserWallet pour sauvegarde
+                        let userWallet = UserWallet(
+                            address: wallet.address,
+                            privateKey: wallet.privateKey,
+                            publicKey: wallet.publicKey,
+                            mnemonic: seedPhrase // Nouveau champ !
+                        )
+                        
+                        // Sauvegarder
+                        do {
+                            try WalletStorage.save(userWallet)
+                            print("💾 Wallet sauvegardé avec succès")
+                            
+                            // TODO: Optionnel - Afficher la phrase mnémonique à l'utilisateur
+                            print("📝 Phrase de récupération: \(wallet.mnemonic)")
+                            print("⚠️  IMPORTANT: Notez cette phrase dans un endroit sûr!")
+                            
+                        } catch {
+                            print("❌ Erreur sauvegarde: \(error)")
+                        }
+                        
+                        // END SAVE WALLET
                             alertMessage = "✅ Wallet \(cryptoType.rawValue) importé avec succès!\n\nAdresse: \(wallet.address)"
                         } else {
                             alertMessage = "❌ Erreur lors de l'import:\n\(result.error ?? "Erreur inconnue")"

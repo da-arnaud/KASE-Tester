@@ -12,6 +12,7 @@
 		6523455C2E521E990025746C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523455B2E521E990025746C /* Extensions.swift */; };
 		6523455F2E5239D30025746C /* segwit_addr.c in Sources */ = {isa = PBXBuildFile; fileRef = 6523455D2E5239D30025746C /* segwit_addr.c */; };
 		652345652E5266610025746C /* kase_bech32_kaspa.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345642E5266610025746C /* kase_bech32_kaspa.c */; };
+		652345682E5358110025746C /* kase_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345672E5358110025746C /* kase_transaction.c */; };
 		65FBFAC12E4E39E000759EE3 /* KASE_TesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */; };
 		65FBFAC32E4E39E000759EE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC22E4E39E000759EE3 /* ContentView.swift */; };
 		65FBFAC52E4E39E200759EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFAC42E4E39E200759EE3 /* Assets.xcassets */; };
@@ -102,6 +103,8 @@
 		6523455E2E5239D30025746C /* segwit_addr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segwit_addr.h; sourceTree = "<group>"; };
 		652345632E5266610025746C /* kase_bech32_kaspa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_bech32_kaspa.h; sourceTree = "<group>"; };
 		652345642E5266610025746C /* kase_bech32_kaspa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_bech32_kaspa.c; sourceTree = "<group>"; };
+		652345662E5358110025746C /* kase_transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_transaction.h; sourceTree = "<group>"; };
+		652345672E5358110025746C /* kase_transaction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_transaction.c; sourceTree = "<group>"; };
 		65FBFABD2E4E39E000759EE3 /* KASE-Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KASE-Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASE_TesterApp.swift; sourceTree = "<group>"; };
 		65FBFAC22E4E39E000759EE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -420,6 +423,8 @@
 				65FBFB6A2E4E540100759EE3 /* kase_wallet.h */,
 				652345582E520F9C0025746C /* kase_bip39.h */,
 				652345592E520F9C0025746C /* kase_bip39.c */,
+				652345662E5358110025746C /* kase_transaction.h */,
+				652345672E5358110025746C /* kase_transaction.c */,
 			);
 			name = lib;
 			path = KASE/lib;
@@ -653,6 +658,7 @@
 				65FBFB842E4E540100759EE3 /* address.c in Sources */,
 				6523455F2E5239D30025746C /* segwit_addr.c in Sources */,
 				65FBFBB42E4E54D000759EE3 /* SettingsView.swift in Sources */,
+				652345682E5358110025746C /* kase_transaction.c in Sources */,
 				65FBFB942E4E540100759EE3 /* nist256p1.c in Sources */,
 				65FBFB772E4E540100759EE3 /* poly1305-donna.c in Sources */,
 				652345572E509C8E0025746C /* ImportWalletSheet.swift in Sources */,

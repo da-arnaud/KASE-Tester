@@ -19,6 +19,13 @@ struct ImportResult {
     let error: String?
 }
 
+
+struct TransactionResult {
+        let success: Bool
+        let transactionId: String?
+        let error: String?
+    }
+
 struct WalletBridge {
     
     static func importWallet(seedPhrase: String, password: String?, cryptoType: CryptoType) -> ImportResult {
@@ -107,4 +114,42 @@ struct WalletBridge {
         }
         return UserWallet(address: finalAddress, privateKey: privKey, publicKey: pubKey,  mnemonic: mnemonic)
     }
+    
+    static func getBalance(for wallet: UserWallet) -> (success: Bool, balance: Double, error: String?) {
+            let address = wallet.address
+            var balance: UInt64 = 0
+            
+            let result = kase_get_balance(address, &balance)
+            
+            if result == KASE_OK {
+                let kasBalance = kase_sompi_to_kas(balance)
+                return (true, kasBalance, nil)
+            } else {
+                return (false, 0.0, "Erreur récupération solde")
+            }
+        }
+        
+        static func createTransaction(from wallet: UserWallet,
+                                    to destinationAddress: String,
+                                    amount: Double) -> TransactionResult {
+            
+            let amountSompi = kase_kas_to_sompi(amount)
+            var result = kase_transaction_result_t()
+            
+            let status = kase_create_transaction(
+                wallet.address,
+                destinationAddress,
+                amountSompi,
+                wallet.privateKey.withUnsafeBytes { $0.bindMemory(to: UInt8.self).baseAddress! },
+                &result
+            )
+            
+            if result.success != 0 {
+                let txId = String(cString: &result.transaction_id.0)
+                return TransactionResult(success: true, transactionId: txId, error: nil)
+            } else {
+                let error = String(cString: &result.error.0)
+                return TransactionResult(success: false, transactionId: nil, error: error)
+            }
+        }
 }
