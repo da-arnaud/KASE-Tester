@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @Binding var userWallet: UserWallet? 
     var body: some View {
         TabView {
-            ActionsView()
+            ActionsView(userWallet: $userWallet)
                 .tabItem {
                     Image(systemName: "play.circle")
                     Text("Actions")
@@ -24,8 +25,4 @@ struct MainTabView: View {
         }
         .accentColor(Color("foreground-solea-orange"))
     }
-}
-
-#Preview {
-    MainTabView()
 }

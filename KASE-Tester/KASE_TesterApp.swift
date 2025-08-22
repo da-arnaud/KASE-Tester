@@ -15,7 +15,7 @@ struct KASE_TesterApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                MainTabView()
+                MainTabView(userWallet: $userWallet)
                     //.opacity(userWallet != nil ? 1 : 0.2)
                     //.disabled(userWallet == nil)
                     /*.onAppear {

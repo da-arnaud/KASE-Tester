@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ActionsView: View {
+    @Binding var userWallet: UserWallet? // Ajout du binding
+    @State private var selectedNetwork: WalletBridge.NetworkType = .testnet
+    
     @State private var kasAmount = ""
     @State private var kasAddress = ""
     @State private var ethAmount = ""
     @State private var ethAddress = ""
+    @State private var walletBalance: Double = 0.0
     
     // States pour les sheets
     @State private var showKasImport = false
@@ -20,7 +24,17 @@ struct ActionsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
+                
+                
+                if let wallet = userWallet {
+                                   WalletInfoSection(wallet: wallet, balance: walletBalance)
+                                       .onAppear {
+                                           loadBalance()
+                                       }
+                               }
+                
                 // Section KAS
+                NetworkSelector(selectedNetwork: $selectedNetwork)
                 CryptoActionSection(
                     title: "KAS",
                     amount: $kasAmount,
@@ -111,10 +125,54 @@ struct ActionsView: View {
         // TODO: Implémenter
     }
     
-    private func sendKasTransaction() {
-        print("💸 Transaction KAS - Montant: \(kasAmount), Adresse: \(kasAddress)")
-        // TODO: Implémenter transaction KAS
-    }
+    
+    private func loadBalance() {
+            guard let wallet = userWallet else { return }
+            
+            let result = WalletBridge.getBalance(for: wallet)
+            if result.success {
+                walletBalance = result.balance
+            }
+        }
+        
+        private func sendKasTransaction() {
+            guard let wallet = userWallet else {
+                print("❌ Aucun wallet actif")
+                return
+            }
+            
+            guard let amount = Double(kasAmount), amount > 0 else {
+                print("❌ Montant invalide")
+                return
+            }
+            
+            guard !kasAddress.isEmpty else {
+                print("❌ Adresse de destination manquante")
+                return
+            }
+            
+            print("💸 Création transaction KAS:")
+            print("   De: \(wallet.address)")
+            print("   Vers: \(kasAddress)")
+            print("   Montant: \(amount) KAS")
+            
+            let result = WalletBridge.createTransaction(
+                from: wallet,
+                to: kasAddress,
+                amount: amount
+            )
+            
+            if result.success {
+                print("✅ Transaction créée! ID: \(result.transactionId ?? "unknown")")
+                // Recharger le solde
+                loadBalance()
+                // Vider les champs
+                kasAmount = ""
+                kasAddress = ""
+            } else {
+                print("❌ Erreur transaction: \(result.error ?? "Inconnue")")
+            }
+        }
     
     // MARK: - ETH Actions
     private func createEthWallet() {
@@ -235,6 +293,40 @@ struct CryptoActionSection: View {
     }
 }
 
+// Nouveau composant pour afficher les infos du wallet
+struct WalletInfoSection: View {
+    let wallet: UserWallet
+    let balance: Double
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Wallet Actif")
+                .font(.headline)
+                .foregroundColor(Color("foreground-solea-orange"))
+            
+            Text(wallet.address)
+                .font(.caption)
+                .foregroundColor(Color("foreground-solea-white"))
+                .lineLimit(1)
+                .truncationMode(.middle)
+            
+            Text("Solde: \(String(format: "%.8f", balance)) KAS")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundColor(Color("foreground-solea-white"))
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color("foreground-solea-orange").opacity(0.1))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color("foreground-solea-orange").opacity(0.3), lineWidth: 1)
+                )
+        )
+    }
+}
+
 // MARK: - Style TextField personnalisé
 struct SoleaTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
@@ -251,8 +343,3 @@ struct SoleaTextFieldStyle: TextFieldStyle {
     }
 }
 
-#Preview {
-    NavigationView {
-        ActionsView()
-    }
-}

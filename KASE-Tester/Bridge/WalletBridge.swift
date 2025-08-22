@@ -28,6 +28,28 @@ struct TransactionResult {
 
 struct WalletBridge {
     
+    enum NetworkType: Int32 {
+            case mainnet = 0
+            case testnet = 1
+            
+            var displayName: String {
+                switch self {
+                case .mainnet: return "Mainnet"
+                case .testnet: return "Testnet"
+                }
+            }
+        }
+    
+    static func setNetwork(_ network: NetworkType) {
+        kase_set_network(kase_network_type_t(UInt32(network.rawValue)))
+            print("🌐 Réseau changé vers: \(network.displayName)")
+        }
+        
+        static func getCurrentNetwork() -> NetworkType {
+            let current = kase_get_network()
+            return NetworkType(rawValue: Int32(current.rawValue)) ?? .testnet
+        }
+    
     static func importWallet(seedPhrase: String, password: String?, cryptoType: CryptoType) -> ImportResult {
         let words = seedPhrase.components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty }
         
@@ -143,13 +165,32 @@ struct WalletBridge {
                 wallet.privateKey.withUnsafeBytes { $0.bindMemory(to: UInt8.self).baseAddress! },
                 &result
             )
+            /*
+            // Vérification et correction de la null-termination
+                withUnsafeMutableBytes(of: &result.transaction_id) { bytes in
+                    let buffer = bytes.bindMemory(to: UInt8.self)
+                    buffer[64] = 0 // Force null termination au dernier index
+                }
             
+        
+                
+                withUnsafeMutableBytes(of: &result.error) { bytes in
+                    let buffer = bytes.bindMemory(to: UInt8.self)
+                    buffer[255] = 0 // Force null termination au dernier index
+                }
+            */
             if result.success != 0 {
-                let txId = String(cString: &result.transaction_id.0)
-                return TransactionResult(success: true, transactionId: txId, error: nil)
-            } else {
-                let error = String(cString: &result.error.0)
-                return TransactionResult(success: false, transactionId: nil, error: error)
-            }
+                    // CORRECTION: Utiliser withUnsafeBytes au lieu de &result.transaction_id.0
+                    let txId = withUnsafeBytes(of: result.transaction_id) { bytes in
+                        String(cString: bytes.bindMemory(to: CChar.self).baseAddress!)
+                    }
+                    return TransactionResult(success: true, transactionId: txId, error: nil)
+                } else {
+                    // Même correction pour l'erreur
+                    let error = withUnsafeBytes(of: result.error) { bytes in
+                        String(cString: bytes.bindMemory(to: CChar.self).baseAddress!)
+                    }
+                    return TransactionResult(success: false, transactionId: nil, error: error)
+                }
         }
 }

@@ -9,5 +9,6 @@
 #define kase_wallet_Bridging_Header_h
 
 #include "kase_wallet.h"
+#include "kase_transaction.h"
 
 #endif /* kase_wallet_Bridging_Header_h */

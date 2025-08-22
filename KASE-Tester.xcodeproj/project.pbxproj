@@ -13,6 +13,9 @@
 		6523455F2E5239D30025746C /* segwit_addr.c in Sources */ = {isa = PBXBuildFile; fileRef = 6523455D2E5239D30025746C /* segwit_addr.c */; };
 		652345652E5266610025746C /* kase_bech32_kaspa.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345642E5266610025746C /* kase_bech32_kaspa.c */; };
 		652345682E5358110025746C /* kase_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345672E5358110025746C /* kase_transaction.c */; };
+		6523456A2E5886790025746C /* NetworkSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652345692E5886790025746C /* NetworkSelector.swift */; };
+		658489AB2E58AE8A00505D4E /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489AA2E58AE8A00505D4E /* libcurl.a */; };
+		658489AD2E58AECC00505D4E /* libjson-c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489AC2E58AECC00505D4E /* libjson-c.a */; };
 		65FBFAC12E4E39E000759EE3 /* KASE_TesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */; };
 		65FBFAC32E4E39E000759EE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC22E4E39E000759EE3 /* ContentView.swift */; };
 		65FBFAC52E4E39E200759EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFAC42E4E39E200759EE3 /* Assets.xcassets */; };
@@ -105,6 +108,11 @@
 		652345642E5266610025746C /* kase_bech32_kaspa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_bech32_kaspa.c; sourceTree = "<group>"; };
 		652345662E5358110025746C /* kase_transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_transaction.h; sourceTree = "<group>"; };
 		652345672E5358110025746C /* kase_transaction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_transaction.c; sourceTree = "<group>"; };
+		652345692E5886790025746C /* NetworkSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSelector.swift; sourceTree = "<group>"; };
+		658489A62E58A28600505D4E /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = ../../../../usr/local/Cellar/curl/8.15.0/lib/libcurl.4.dylib; sourceTree = "<group>"; };
+		658489A82E58A2F500505D4E /* libjson-c.5.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libjson-c.5.4.0.dylib"; path = "../../../../usr/local/Cellar/json-c/0.18/lib/libjson-c.5.4.0.dylib"; sourceTree = "<group>"; };
+		658489AA2E58AE8A00505D4E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../usr/local/Cellar/curl/8.15.0/lib/libcurl.a; sourceTree = "<group>"; };
+		658489AC2E58AECC00505D4E /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson-c.a"; path = "../../../../usr/local/Cellar/json-c/0.18/lib/libjson-c.a"; sourceTree = "<group>"; };
 		65FBFABD2E4E39E000759EE3 /* KASE-Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KASE-Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASE_TesterApp.swift; sourceTree = "<group>"; };
 		65FBFAC22E4E39E000759EE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,6 +244,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658489AD2E58AECC00505D4E /* libjson-c.a in Frameworks */,
+				658489AB2E58AE8A00505D4E /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +266,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		658489A52E58A28600505D4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				658489AC2E58AECC00505D4E /* libjson-c.a */,
+				658489AA2E58AE8A00505D4E /* libcurl.a */,
+				658489A82E58A2F500505D4E /* libjson-c.5.4.0.dylib */,
+				658489A62E58A28600505D4E /* libcurl.4.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65FBFAB42E4E39DF00759EE3 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +284,7 @@
 				65FBFAD02E4E39E200759EE3 /* KASE-TesterTests */,
 				65FBFADA2E4E39E200759EE3 /* KASE-TesterUITests */,
 				65FBFABE2E4E39E000759EE3 /* Products */,
+				658489A52E58A28600505D4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -456,6 +478,7 @@
 				65FBFBB02E4E54D000759EE3 /* WalletViewer.swift */,
 				65FBFC142E4F384400759EE3 /* ActionsView.swift */,
 				652345562E509C8E0025746C /* ImportWalletSheet.swift */,
+				652345692E5886790025746C /* NetworkSelector.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -634,6 +657,7 @@
 				65FBFC112E4F2C5B00759EE3 /* ed25519.c in Sources */,
 				65FBFC0A2E4F2C5B00759EE3 /* curve25519-donna-helpers.c in Sources */,
 				6523455C2E521E990025746C /* Extensions.swift in Sources */,
+				6523456A2E5886790025746C /* NetworkSelector.swift in Sources */,
 				65FBFB9C2E4E540100759EE3 /* sha2.c in Sources */,
 				65FBFB852E4E540100759EE3 /* base58.c in Sources */,
 				65FBFC0E2E4F2C5B00759EE3 /* ed25519-donna-impl-base.c in Sources */,
@@ -865,6 +889,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/KASE-Tester/lib",
 					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+					/usr/local/opt/curl/include,
+					"/usr/local/opt/json-c/include",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -874,6 +900,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/curl/8.15.0/lib,
+					"/usr/local/Cellar/json-c/0.18/lib",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
@@ -903,6 +934,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/KASE-Tester/lib",
 					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
+					/usr/local/opt/curl/include,
+					"/usr/local/opt/json-c/include",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -912,6 +945,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/curl/8.15.0/lib,
+					"/usr/local/Cellar/json-c/0.18/lib",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
