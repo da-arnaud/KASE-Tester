@@ -30,12 +30,14 @@ struct WalletBridge {
     
     enum NetworkType: Int32 {
             case mainnet = 0
-            case testnet = 1
+            case testnet10 = 1
+            case testnet11 = 2
             
             var displayName: String {
                 switch self {
                 case .mainnet: return "Mainnet"
-                case .testnet: return "Testnet"
+                case .testnet10: return "Testnet-10"
+                case .testnet11: return "Testnet-11"
                 }
             }
         }
@@ -45,12 +47,12 @@ struct WalletBridge {
             print("🌐 Réseau changé vers: \(network.displayName)")
         }
         
-        static func getCurrentNetwork() -> NetworkType {
-            let current = kase_get_network()
-            return NetworkType(rawValue: Int32(current.rawValue)) ?? .testnet
-        }
+    static func getCurrentNetwork() -> NetworkType {
+        let current = kase_get_network()
+        return NetworkType(rawValue: Int32(current.rawValue)) ?? .testnet10
+    }
     
-    static func importWallet(seedPhrase: String, password: String?, cryptoType: CryptoType) -> ImportResult {
+    static func importWallet(seedPhrase: String, password: String?, cryptoType: CryptoType, network: NetworkType) -> ImportResult {
         let words = seedPhrase.components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty }
         
         guard words.count == 12 || words.count == 24 else {
@@ -61,7 +63,7 @@ struct WalletBridge {
         switch cryptoType {
         case .kas:
             // Utiliser la fonction existante recoverWallet
-                    if let wallet = recoverWallet(from: seedPhrase, passphrase: password ?? "") {
+                    if let wallet = recoverWallet(from: seedPhrase, passphrase: password ?? "", network: network) {
                         return ImportResult(success: true, wallet: wallet, error: nil)
                     } else {
                         return ImportResult(success: false, wallet: nil, error: "Échec de la récupération du wallet Kaspa. Vérifiez votre phrase de récupération.")
@@ -73,9 +75,9 @@ struct WalletBridge {
     }
     
     // Dans WalletBridge.swift
-    static func createWallet() -> (success: Bool, wallet: UserWallet?, error: String?) {
+    static func createWallet(network: NetworkType = .mainnet) -> (success: Bool, wallet: UserWallet?, error: String?) {
         var wallet = kase_wallet_t()
-        let result = kase_generate_wallet(&wallet)
+        let result = kase_generate_wallet(&wallet, kase_network_type_t(UInt32(network.rawValue)))
         
         if result == KASE_OK {
             let userWallet = UserWallet(
@@ -98,7 +100,7 @@ struct WalletBridge {
         }
     }
     
-    static func recoverWallet(from mnemonic: String, passphrase: String = "") -> UserWallet? {
+    static func recoverWallet(from mnemonic: String, passphrase: String = "", network: NetworkType = .mainnet) -> UserWallet? {
         var wallet = kase_wallet_t()
         
         guard let mnemonic_c = mnemonic.cString(using: .utf8),
@@ -106,7 +108,7 @@ struct WalletBridge {
             return nil
         }
         
-        let result = kase_recover_wallet_from_seed(mnemonic_c, passphrase_c, &wallet)
+        let result = kase_recover_wallet_from_seed(mnemonic_c, passphrase_c, &wallet, kase_network_type_t(UInt32(network.rawValue)))
         
         let rawAddressBytes = Data(bytes: &wallet.kaspa_address, count: 128)
         

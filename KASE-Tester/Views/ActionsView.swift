@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActionsView: View {
     @Binding var userWallet: UserWallet? // Ajout du binding
-    @State private var selectedNetwork: WalletBridge.NetworkType = .testnet
+    @State private var selectedNetwork: WalletBridge.NetworkType = .testnet10
     
     @State private var kasAmount = ""
     @State private var kasAddress = ""
@@ -73,10 +73,10 @@ struct ActionsView: View {
         .navigationTitle("Actions")
         .navigationBarTitleDisplayMode(.large)
         .sheet(isPresented: $showKasImport) {
-            ImportWalletSheet(cryptoType: .kas,  isPresented: $showKasImport)
+            ImportWalletSheet(cryptoType: .kas,  isPresented: $showKasImport, selectedNetwork: $selectedNetwork)
         }
         .sheet(isPresented: $showEthImport) {
-            ImportWalletSheet(cryptoType: .eth,  isPresented: $showKasImport)
+            ImportWalletSheet(cryptoType: .eth,  isPresented: $showKasImport, selectedNetwork: $selectedNetwork)
         }
 
     }
@@ -85,10 +85,11 @@ struct ActionsView: View {
     private func createKasWallet() {
         print("🔑 Créer Wallet KAS")
         // Créer le wallet via le bridge C
-            let result = WalletBridge.createWallet()
+        let result = WalletBridge.createWallet(network: selectedNetwork)
             
             if result.success, let wallet = result.wallet {
                 print("✅ Wallet créé!")
+                print("🌐 Création wallet sur réseau: \(selectedNetwork)")
                 print("📍 Adresse: \(wallet.address)")
                 print("🔑 Clé publique: \(wallet.publicKey.hexString)")
                 print("🔑 Clé privée: \(wallet.privateKey.hexString)")

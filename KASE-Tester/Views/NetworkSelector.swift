@@ -16,7 +16,7 @@ struct NetworkSelector: View {
                         .foregroundColor(Color("foreground-solea-orange"))
                     
                     Picker("Réseau", selection: $selectedNetwork) {
-                        Text("🧪 Testnet").tag(WalletBridge.NetworkType.testnet)
+                        Text("🧪 Testnet").tag(WalletBridge.NetworkType.testnet10)
                         Text("🌐 Mainnet").tag(WalletBridge.NetworkType.mainnet)
                     }
                     .pickerStyle(SegmentedPickerStyle())

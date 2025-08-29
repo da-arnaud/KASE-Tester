@@ -10,6 +10,7 @@ import SwiftUI
 struct ImportWalletSheet: View {
     let cryptoType: CryptoType
     @Binding var isPresented: Bool
+    @Binding var selectedNetwork: WalletBridge.NetworkType
     
     @State private var seedPhrase = ""
     @State private var password = ""
@@ -159,7 +160,8 @@ struct ImportWalletSheet: View {
                 let result = WalletBridge.importWallet(
                     seedPhrase: cleanSeed,
                     password: password.isEmpty ? nil : password,
-                    cryptoType: cryptoType
+                    cryptoType: cryptoType,
+                    network: selectedNetwork
                 )
                 
                 DispatchQueue.main.async {
@@ -208,10 +210,3 @@ struct ImportWalletSheet: View {
     }
 }
 
-
-#Preview {
-    ImportWalletSheet(
-        cryptoType: .kas,
-        isPresented: .constant(true)
-    )
-}

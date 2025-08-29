@@ -14,8 +14,12 @@
 		652345652E5266610025746C /* kase_bech32_kaspa.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345642E5266610025746C /* kase_bech32_kaspa.c */; };
 		652345682E5358110025746C /* kase_transaction.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345672E5358110025746C /* kase_transaction.c */; };
 		6523456A2E5886790025746C /* NetworkSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652345692E5886790025746C /* NetworkSelector.swift */; };
-		658489AB2E58AE8A00505D4E /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489AA2E58AE8A00505D4E /* libcurl.a */; };
-		658489AD2E58AECC00505D4E /* libjson-c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489AC2E58AECC00505D4E /* libjson-c.a */; };
+		658424522E5D0FDA00505D4E /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 658424502E5D0FDA00505D4E /* secp256k1.c */; };
+		658425802E5E02BE00505D4E /* bip340.c in Sources */ = {isa = PBXBuildFile; fileRef = 6584257F2E5E02BE00505D4E /* bip340.c */; };
+		658425832E5E034300505D4E /* ecdsa.c in Sources */ = {isa = PBXBuildFile; fileRef = 658425822E5E034300505D4E /* ecdsa.c */; };
+		658489B32E58D33C00505D4E /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489B22E58D33C00505D4E /* libcurl.a */; };
+		658489B52E58D34D00505D4E /* libjson-c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489B42E58D34D00505D4E /* libjson-c.a */; };
+		658489B72E59178700505D4E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 658489B62E59178700505D4E /* libz.tbd */; };
 		65FBFAC12E4E39E000759EE3 /* KASE_TesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */; };
 		65FBFAC32E4E39E000759EE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFAC22E4E39E000759EE3 /* ContentView.swift */; };
 		65FBFAC52E4E39E200759EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FBFAC42E4E39E200759EE3 /* Assets.xcassets */; };
@@ -35,7 +39,6 @@
 		65FBFB882E4E540100759EE3 /* bip39_english.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB2F2E4E540100759EE3 /* bip39_english.c */; };
 		65FBFB892E4E540100759EE3 /* bip39.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB302E4E540100759EE3 /* bip39.c */; };
 		65FBFB8D2E4E540100759EE3 /* curves.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB3A2E4E540100759EE3 /* curves.c */; };
-		65FBFB8E2E4E540100759EE3 /* ecdsa.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB3C2E4E540100759EE3 /* ecdsa.c */; };
 		65FBFB902E4E540100759EE3 /* hasher.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB412E4E540100759EE3 /* hasher.c */; };
 		65FBFB912E4E540100759EE3 /* hmac_drbg.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB432E4E540100759EE3 /* hmac_drbg.c */; };
 		65FBFB922E4E540100759EE3 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB452E4E540100759EE3 /* hmac.c */; };
@@ -46,7 +49,6 @@
 		65FBFB982E4E540100759EE3 /* rfc6979.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB512E4E540100759EE3 /* rfc6979.c */; };
 		65FBFB992E4E540100759EE3 /* ripemd160.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB532E4E540100759EE3 /* ripemd160.c */; };
 		65FBFB9A2E4E540100759EE3 /* script.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB552E4E540100759EE3 /* script.c */; };
-		65FBFB9B2E4E540100759EE3 /* secp256k1.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB572E4E540100759EE3 /* secp256k1.c */; };
 		65FBFB9C2E4E540100759EE3 /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB592E4E540100759EE3 /* sha2.c */; };
 		65FBFB9D2E4E540100759EE3 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB5B2E4E540100759EE3 /* sha3.c */; };
 		65FBFB9F2E4E540100759EE3 /* kase_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 65FBFB5F2E4E540100759EE3 /* kase_crypto.c */; };
@@ -109,10 +111,17 @@
 		652345662E5358110025746C /* kase_transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_transaction.h; sourceTree = "<group>"; };
 		652345672E5358110025746C /* kase_transaction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_transaction.c; sourceTree = "<group>"; };
 		652345692E5886790025746C /* NetworkSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSelector.swift; sourceTree = "<group>"; };
-		658489A62E58A28600505D4E /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = ../../../../usr/local/Cellar/curl/8.15.0/lib/libcurl.4.dylib; sourceTree = "<group>"; };
-		658489A82E58A2F500505D4E /* libjson-c.5.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libjson-c.5.4.0.dylib"; path = "../../../../usr/local/Cellar/json-c/0.18/lib/libjson-c.5.4.0.dylib"; sourceTree = "<group>"; };
-		658489AA2E58AE8A00505D4E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../usr/local/Cellar/curl/8.15.0/lib/libcurl.a; sourceTree = "<group>"; };
-		658489AC2E58AECC00505D4E /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson-c.a"; path = "../../../../usr/local/Cellar/json-c/0.18/lib/libjson-c.a"; sourceTree = "<group>"; };
+		658424272E5CFFC400505D4E /* libsecp256k1.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsecp256k1.6.dylib; path = ../../../../usr/local/Cellar/secp256k1/0.7.0/lib/libsecp256k1.6.dylib; sourceTree = "<group>"; };
+		658424502E5D0FDA00505D4E /* secp256k1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = secp256k1.c; sourceTree = "<group>"; };
+		658424512E5D0FDA00505D4E /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
+		6584257E2E5E02BE00505D4E /* bip340.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bip340.h; sourceTree = "<group>"; };
+		6584257F2E5E02BE00505D4E /* bip340.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bip340.c; sourceTree = "<group>"; };
+		658425812E5E034300505D4E /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		658425822E5E034300505D4E /* ecdsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecdsa.c; sourceTree = "<group>"; };
+		658489B22E58D33C00505D4E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../crosscompile/build/ios/lib/libcurl.a; sourceTree = "<group>"; };
+		658489B42E58D34D00505D4E /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson-c.a"; path = "../crosscompile/build/ios/lib/libjson-c.a"; sourceTree = "<group>"; };
+		658489B62E59178700505D4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		658489B82E59F7AA00505D4E /* kase_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_types.h; sourceTree = "<group>"; };
 		65FBFABD2E4E39E000759EE3 /* KASE-Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KASE-Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FBFAC02E4E39E000759EE3 /* KASE_TesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASE_TesterApp.swift; sourceTree = "<group>"; };
 		65FBFAC22E4E39E000759EE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,8 +160,6 @@
 		65FBFB372E4E540100759EE3 /* byte_order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byte_order.h; sourceTree = "<group>"; };
 		65FBFB3A2E4E540100759EE3 /* curves.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = curves.c; sourceTree = "<group>"; };
 		65FBFB3B2E4E540100759EE3 /* curves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curves.h; sourceTree = "<group>"; };
-		65FBFB3C2E4E540100759EE3 /* ecdsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecdsa.c; sourceTree = "<group>"; };
-		65FBFB3D2E4E540100759EE3 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
 		65FBFB3E2E4E540100759EE3 /* groestl_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groestl_internal.h; sourceTree = "<group>"; };
 		65FBFB412E4E540100759EE3 /* hasher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hasher.c; sourceTree = "<group>"; };
 		65FBFB422E4E540100759EE3 /* hasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hasher.h; sourceTree = "<group>"; };
@@ -175,8 +182,6 @@
 		65FBFB542E4E540100759EE3 /* ripemd160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd160.h; sourceTree = "<group>"; };
 		65FBFB552E4E540100759EE3 /* script.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = script.c; sourceTree = "<group>"; };
 		65FBFB562E4E540100759EE3 /* script.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = script.h; sourceTree = "<group>"; };
-		65FBFB572E4E540100759EE3 /* secp256k1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = secp256k1.c; sourceTree = "<group>"; };
-		65FBFB582E4E540100759EE3 /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
 		65FBFB592E4E540100759EE3 /* sha2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha2.c; sourceTree = "<group>"; };
 		65FBFB5A2E4E540100759EE3 /* sha2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha2.h; sourceTree = "<group>"; };
 		65FBFB5B2E4E540100759EE3 /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
@@ -244,8 +249,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658489AD2E58AECC00505D4E /* libjson-c.a in Frameworks */,
-				658489AB2E58AE8A00505D4E /* libcurl.a in Frameworks */,
+				658489B72E59178700505D4E /* libz.tbd in Frameworks */,
+				658489B52E58D34D00505D4E /* libjson-c.a in Frameworks */,
+				658489B32E58D33C00505D4E /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +275,10 @@
 		658489A52E58A28600505D4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				658489AC2E58AECC00505D4E /* libjson-c.a */,
-				658489AA2E58AE8A00505D4E /* libcurl.a */,
-				658489A82E58A2F500505D4E /* libjson-c.5.4.0.dylib */,
-				658489A62E58A28600505D4E /* libcurl.4.dylib */,
+				658424272E5CFFC400505D4E /* libsecp256k1.6.dylib */,
+				658489B62E59178700505D4E /* libz.tbd */,
+				658489B42E58D34D00505D4E /* libjson-c.a */,
+				658489B22E58D33C00505D4E /* libcurl.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -364,6 +370,10 @@
 		65FBFB5D2E4E540100759EE3 /* crypto */ = {
 			isa = PBXGroup;
 			children = (
+				658425822E5E034300505D4E /* ecdsa.c */,
+				658425812E5E034300505D4E /* ecdsa.h */,
+				658424502E5D0FDA00505D4E /* secp256k1.c */,
+				658424512E5D0FDA00505D4E /* secp256k1.h */,
 				6523455D2E5239D30025746C /* segwit_addr.c */,
 				6523455E2E5239D30025746C /* segwit_addr.h */,
 				65FBFC082E4F2C5B00759EE3 /* ed25519-donna */,
@@ -391,8 +401,6 @@
 				65FBFB372E4E540100759EE3 /* byte_order.h */,
 				65FBFB3A2E4E540100759EE3 /* curves.c */,
 				65FBFB3B2E4E540100759EE3 /* curves.h */,
-				65FBFB3C2E4E540100759EE3 /* ecdsa.c */,
-				65FBFB3D2E4E540100759EE3 /* ecdsa.h */,
 				65FBFB3E2E4E540100759EE3 /* groestl_internal.h */,
 				65FBFB412E4E540100759EE3 /* hasher.c */,
 				65FBFB422E4E540100759EE3 /* hasher.h */,
@@ -415,12 +423,12 @@
 				65FBFB542E4E540100759EE3 /* ripemd160.h */,
 				65FBFB552E4E540100759EE3 /* script.c */,
 				65FBFB562E4E540100759EE3 /* script.h */,
-				65FBFB572E4E540100759EE3 /* secp256k1.c */,
-				65FBFB582E4E540100759EE3 /* secp256k1.h */,
 				65FBFB592E4E540100759EE3 /* sha2.c */,
 				65FBFB5A2E4E540100759EE3 /* sha2.h */,
 				65FBFB5B2E4E540100759EE3 /* sha3.c */,
 				65FBFB5C2E4E540100759EE3 /* sha3.h */,
+				6584257E2E5E02BE00505D4E /* bip340.h */,
+				6584257F2E5E02BE00505D4E /* bip340.c */,
 			);
 			path = crypto;
 			sourceTree = "<group>";
@@ -447,6 +455,7 @@
 				652345592E520F9C0025746C /* kase_bip39.c */,
 				652345662E5358110025746C /* kase_transaction.h */,
 				652345672E5358110025746C /* kase_transaction.c */,
+				658489B82E59F7AA00505D4E /* kase_types.h */,
 			);
 			name = lib;
 			path = KASE/lib;
@@ -669,9 +678,10 @@
 				65FBFC0F2E4F2C5B00759EE3 /* ed25519-keccak.c in Sources */,
 				65FBFB972E4E540100759EE3 /* rand.c in Sources */,
 				65FBFBA12E4E540100759EE3 /* kase_protocol.c in Sources */,
-				65FBFB8E2E4E540100759EE3 /* ecdsa.c in Sources */,
 				65FBFB902E4E540100759EE3 /* hasher.c in Sources */,
 				65FBFC0C2E4F2C5B00759EE3 /* ed25519-donna-32bit-tables.c in Sources */,
+				658425802E5E02BE00505D4E /* bip340.c in Sources */,
+				658424522E5D0FDA00505D4E /* secp256k1.c in Sources */,
 				65FBFB892E4E540100759EE3 /* bip39.c in Sources */,
 				65FBFB862E4E540100759EE3 /* bignum.c in Sources */,
 				65FBFC152E4F384400759EE3 /* ActionsView.swift in Sources */,
@@ -697,8 +707,8 @@
 				65FBFB912E4E540100759EE3 /* hmac_drbg.c in Sources */,
 				65FBFBA42E4E540100759EE3 /* kase_wallet.c in Sources */,
 				65FBFBAB2E4E54C200759EE3 /* WalletStorage.swift in Sources */,
-				65FBFB9B2E4E540100759EE3 /* secp256k1.c in Sources */,
 				65FBFBA32E4E540100759EE3 /* kase_sha256.c in Sources */,
+				658425832E5E034300505D4E /* ecdsa.c in Sources */,
 				65FBFB982E4E540100759EE3 /* rfc6979.c in Sources */,
 				65FBFB9D2E4E540100759EE3 /* sha3.c in Sources */,
 				65FBFC0B2E4F2C5B00759EE3 /* curve25519-donna-scalarmult-base.c in Sources */,
@@ -885,12 +895,19 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 24XY6SS87S;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"SECP256K1_WIDEMUL_INT64=1",
+					"USE_SCALAR_4X64=1",
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester//lib/crypto",
 					"$(PROJECT_DIR)/KASE-Tester/lib",
-					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
-					/usr/local/opt/curl/include,
-					"/usr/local/opt/json-c/include",
+					/Users/daniel/Code/crosscompile/build/ios/include,
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto/secp256k1",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -903,8 +920,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/curl/8.15.0/lib,
-					"/usr/local/Cellar/json-c/0.18/lib",
+					/Users/daniel/Code/crosscompile/build/ios/lib,
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
@@ -930,12 +946,16 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 24XY6SS87S;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SECP256K1_WIDEMUL_INT64=1",
+					"USE_SCALAR_4X64=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/KASE-Tester//lib/crypto",
 					"$(PROJECT_DIR)/KASE-Tester/lib",
-					"$(PROJECT_DIR)/KASE-Tester/lib/crypto",
-					/usr/local/opt/curl/include,
-					"/usr/local/opt/json-c/include",
+					/Users/daniel/Code/crosscompile/build/ios/include,
+					"$(PROJECT_DIR)/KASE-Tester/lib/crypto/secp256k1",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -948,8 +968,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/Cellar/curl/8.15.0/lib,
-					"/usr/local/Cellar/json-c/0.18/lib",
+					/Users/daniel/Code/crosscompile/build/ios/lib,
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solea-innovation.KASE-Tester";
