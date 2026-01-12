@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6510628C2E79734F0092D9BA /* kase_secp_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = 6510628B2E79734F0092D9BA /* kase_secp_ref.c */; };
+		6510628F2E7DA49E0092D9BA /* secp256k1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510628E2E7DA49E0092D9BA /* secp256k1.xcframework */; };
 		652345572E509C8E0025746C /* ImportWalletSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652345562E509C8E0025746C /* ImportWalletSheet.swift */; };
 		6523455A2E520F9C0025746C /* kase_bip39.c in Sources */ = {isa = PBXBuildFile; fileRef = 652345592E520F9C0025746C /* kase_bip39.c */; };
 		6523455C2E521E990025746C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523455B2E521E990025746C /* Extensions.swift */; };
@@ -100,6 +102,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6510628A2E79734F0092D9BA /* kase_secp_ref.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_secp_ref.h; sourceTree = "<group>"; };
+		6510628B2E79734F0092D9BA /* kase_secp_ref.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_secp_ref.c; sourceTree = "<group>"; };
+		6510628E2E7DA49E0092D9BA /* secp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = secp256k1.xcframework; sourceTree = "<group>"; };
 		652345562E509C8E0025746C /* ImportWalletSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWalletSheet.swift; sourceTree = "<group>"; };
 		652345582E520F9C0025746C /* kase_bip39.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_bip39.h; sourceTree = "<group>"; };
 		652345592E520F9C0025746C /* kase_bip39.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_bip39.c; sourceTree = "<group>"; };
@@ -111,7 +116,6 @@
 		652345662E5358110025746C /* kase_transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kase_transaction.h; sourceTree = "<group>"; };
 		652345672E5358110025746C /* kase_transaction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kase_transaction.c; sourceTree = "<group>"; };
 		652345692E5886790025746C /* NetworkSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSelector.swift; sourceTree = "<group>"; };
-		658424272E5CFFC400505D4E /* libsecp256k1.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsecp256k1.6.dylib; path = ../../../../usr/local/Cellar/secp256k1/0.7.0/lib/libsecp256k1.6.dylib; sourceTree = "<group>"; };
 		658424502E5D0FDA00505D4E /* secp256k1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = secp256k1.c; sourceTree = "<group>"; };
 		658424512E5D0FDA00505D4E /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
 		6584257E2E5E02BE00505D4E /* bip340.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bip340.h; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6510628F2E7DA49E0092D9BA /* secp256k1.xcframework in Frameworks */,
 				658489B72E59178700505D4E /* libz.tbd in Frameworks */,
 				658489B52E58D34D00505D4E /* libjson-c.a in Frameworks */,
 				658489B32E58D33C00505D4E /* libcurl.a in Frameworks */,
@@ -275,7 +280,7 @@
 		658489A52E58A28600505D4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				658424272E5CFFC400505D4E /* libsecp256k1.6.dylib */,
+				6510628E2E7DA49E0092D9BA /* secp256k1.xcframework */,
 				658489B62E59178700505D4E /* libz.tbd */,
 				658489B42E58D34D00505D4E /* libjson-c.a */,
 				658489B22E58D33C00505D4E /* libcurl.a */,
@@ -456,6 +461,8 @@
 				652345662E5358110025746C /* kase_transaction.h */,
 				652345672E5358110025746C /* kase_transaction.c */,
 				658489B82E59F7AA00505D4E /* kase_types.h */,
+				6510628A2E79734F0092D9BA /* kase_secp_ref.h */,
+				6510628B2E79734F0092D9BA /* kase_secp_ref.c */,
 			);
 			name = lib;
 			path = KASE/lib;
@@ -699,6 +706,7 @@
 				65FBFBB62E4E54D000759EE3 /* WalletViewer.swift in Sources */,
 				65FBFB882E4E540100759EE3 /* bip39_english.c in Sources */,
 				65FBFB752E4E540100759EE3 /* chacha20poly1305.c in Sources */,
+				6510628C2E79734F0092D9BA /* kase_secp_ref.c in Sources */,
 				65FBFB872E4E540100759EE3 /* bip32.c in Sources */,
 				65FBFB9A2E4E540100759EE3 /* script.c in Sources */,
 				65FBFB9F2E4E540100759EE3 /* kase_crypto.c in Sources */,
@@ -900,6 +908,7 @@
 					"$(inherited)",
 					"SECP256K1_WIDEMUL_INT64=1",
 					"USE_SCALAR_4X64=1",
+					"KASE_SIGDBG=1",
 				);
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -907,7 +916,6 @@
 					"$(PROJECT_DIR)/KASE-Tester//lib/crypto",
 					"$(PROJECT_DIR)/KASE-Tester/lib",
 					/Users/daniel/Code/crosscompile/build/ios/include,
-					"$(PROJECT_DIR)/KASE-Tester/lib/crypto/secp256k1",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -949,13 +957,13 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"SECP256K1_WIDEMUL_INT64=1",
 					"USE_SCALAR_4X64=1",
+					"KASE_SIGDBG=1",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/KASE-Tester//lib/crypto",
 					"$(PROJECT_DIR)/KASE-Tester/lib",
 					/Users/daniel/Code/crosscompile/build/ios/include,
-					"$(PROJECT_DIR)/KASE-Tester/lib/crypto/secp256k1",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

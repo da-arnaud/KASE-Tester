@@ -47,8 +47,8 @@ struct ImportWalletSheet: View {
                                 .frame(minHeight: 120)
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 8)
-                                .background(Color("foreground-solea-white").opacity(0.1))
-                                .foregroundColor(Color("foreground-solea-white"))
+                                .background(Color("background-solea-blue").opacity(0.1))
+                                .foregroundColor(Color("background-solea-blue"))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)

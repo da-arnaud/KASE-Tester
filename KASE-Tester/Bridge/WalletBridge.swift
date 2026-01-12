@@ -108,7 +108,7 @@ struct WalletBridge {
             return nil
         }
         
-        let result = kase_recover_wallet_from_seed(mnemonic_c, passphrase_c, &wallet, kase_network_type_t(UInt32(network.rawValue)))
+        let result = kase_generate_wallet_with_mnemonic(mnemonic_c, passphrase_c, &wallet, kase_network_type_t(UInt32(network.rawValue)))
         
         let rawAddressBytes = Data(bytes: &wallet.kaspa_address, count: 128)
         
